@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+.expo/
+dist/
+build/
+
+# Zips
+*.zip
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.*
