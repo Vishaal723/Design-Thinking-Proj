@@ -1,301 +1,301 @@
-food_id,food_name,category,calories,protein,carbs,fat
-1001,Grilled Chicken Bowl,Bowl,520,42,48,12
-1002,Chicken Biryani,Rice Dish,650,35,72,18
-1003,Paneer Butter Masala,Curry,480,22,38,26
-1004,Beef Burrito Bowl,Bowl,680,38,62,22
-1005,Salmon Teriyaki,Grilled,490,40,32,18
-1006,Chicken Fried Rice,Rice Dish,610,28,74,18
-1007,Veg Hakka Noodles,Noodles,420,12,68,11
-1008,Ramen Bowl,Noodles,580,28,62,20
-1009,Tandoori Chicken,Grilled,390,45,8,14
-1010,Chicken Shawarma Wrap,Wrap,540,36,52,16
-1011,Mutton Biryani,Rice Dish,720,40,70,22
-1012,Paneer Tikka,Grilled,360,24,18,22
-1013,Dal Makhani,Curry,420,18,52,14
-1014,Butter Chicken,Curry,510,38,28,28
-1015,Palak Paneer,Curry,390,20,24,24
-1016,Chicken Tikka Masala,Curry,530,40,30,26
-1017,Egg Fried Rice,Rice Dish,520,18,68,16
-1018,Chicken Noodle Soup,Soup,310,24,34,8
-1019,Beef Stir Fry,Stir Fry,480,36,38,16
-1020,Shrimp Pad Thai,Noodles,560,28,72,14
-1021,Chicken Caesar Salad,Salad,420,36,18,22
-1022,Turkey Club Wrap,Wrap,490,34,44,16
-1023,Grilled Salmon,Grilled,440,42,8,22
-1024,Chicken Quesadilla,Mexican,560,36,48,20
-1025,Beef Tacos,Mexican,620,34,58,24
-1026,Veggie Burrito Bowl,Bowl,480,16,72,14
-1027,Tofu Stir Fry,Stir Fry,380,22,42,14
-1028,Chicken Wrap,Wrap,500,34,48,16
-1029,Margherita Pizza,Pizza,720,28,88,24
-1030,BBQ Chicken Pizza,Pizza,820,42,90,28
-1031,Pepperoni Pizza,Pizza,880,38,92,34
-1032,Pasta Primavera,Pasta,520,18,76,16
-1033,Spaghetti Bolognese,Pasta,620,34,72,18
-1034,Chicken Alfredo Pasta,Pasta,680,38,74,24
-1035,Penne Arrabbiata,Pasta,490,16,78,12
-1036,Lamb Kofta,Grilled,430,34,18,24
-1037,Fish and Chips,Fried,720,32,72,32
-1038,Chicken Burger,Burger,580,34,52,24
-1039,Beef Burger,Burger,680,40,52,32
-1040,Veggie Burger,Burger,480,18,62,16
-1041,Grilled Tuna Steak,Grilled,380,48,4,18
-1042,Prawn Curry,Curry,420,30,28,20
-1043,Chicken Korma,Curry,560,38,26,32
-1044,Mixed Veg Curry,Curry,320,10,44,12
-1045,Aloo Gobi,Curry,280,8,44,10
-1046,Chicken Soup,Soup,280,26,22,8
-1047,Tom Yum Soup,Soup,220,18,20,6
-1048,Minestrone Soup,Soup,260,10,38,8
-1049,French Onion Soup,Soup,310,12,38,10
-1050,Chicken Enchiladas,Mexican,620,38,58,22
-1051,Beef Nachos,Mexican,740,34,68,32
-1052,Chicken Fajitas,Mexican,580,38,52,20
-1053,Veggie Fajitas,Mexican,460,14,64,16
-1054,Lamb Biryani,Rice Dish,700,38,72,22
-1055,Veg Biryani,Rice Dish,540,14,84,14
-1056,Egg Biryani,Rice Dish,580,22,80,16
-1057,Chicken Pulao,Rice Dish,560,32,68,16
-1058,Prawn Biryani,Rice Dish,620,34,72,18
-1059,Chicken Pho,Noodles,420,32,48,8
-1060,Beef Pho,Noodles,480,36,50,12
-1061,Laksa,Noodles,560,28,62,22
-1062,Chicken Udon,Noodles,520,30,68,12
-1063,Beef Ramen,Noodles,620,38,64,20
-1064,Tonkotsu Ramen,Noodles,680,36,66,26
-1065,Miso Ramen,Noodles,540,24,68,18
-1066,Chicken Soba Noodles,Noodles,460,28,62,10
-1067,Kung Pao Chicken,Stir Fry,480,34,34,22
-1068,Beef and Broccoli,Stir Fry,420,32,28,18
-1069,Sweet and Sour Pork,Stir Fry,520,28,52,20
-1070,General Tso Chicken,Stir Fry,560,32,56,22
-1071,Mapo Tofu,Stir Fry,360,20,24,20
-1072,Chicken Teriyaki Bowl,Bowl,520,38,52,12
-1073,Salmon Sushi Bowl,Bowl,540,36,64,12
-1074,Tuna Poke Bowl,Bowl,490,38,52,12
-1075,Veggie Poke Bowl,Bowl,420,14,68,12
-1076,Shrimp Poke Bowl,Bowl,470,32,56,12
-1077,Greek Salad with Chicken,Salad,380,34,16,20
-1078,Tuna Nicoise Salad,Salad,360,34,18,18
-1079,Quinoa Chicken Salad,Salad,440,36,38,14
-1080,Grilled Veggie Salad,Salad,280,10,34,14
-1081,Steak Salad,Salad,480,38,18,26
-1082,Chicken Tikka Wrap,Wrap,520,36,50,16
-1083,Lamb Shawarma Wrap,Wrap,580,36,54,22
-1084,Falafel Wrap,Wrap,480,16,64,18
-1085,Tuna Wrap,Wrap,460,32,48,14
-1086,Grilled Veggie Wrap,Wrap,400,12,60,14
-1087,Chicken Gyros,Wrap,540,36,52,18
-1088,Chicken Souvlaki,Grilled,420,38,18,18
-1089,Lamb Souvlaki,Grilled,460,36,18,22
-1090,Grilled Sea Bass,Grilled,380,42,6,18
-1091,Lemon Herb Chicken,Grilled,360,42,6,16
-1092,Garlic Butter Shrimp,Grilled,320,28,8,18
-1093,BBQ Ribs,Grilled,780,48,36,44
-1094,Pulled Pork Bowl,Bowl,620,36,52,24
-1095,Brisket Bowl,Bowl,680,42,48,28
-1096,Chicken Tenders Bowl,Bowl,580,38,52,20
-1097,Steak Burrito Bowl,Bowl,720,44,64,26
-1098,Shrimp Burrito Bowl,Bowl,580,32,64,16
-1099,Tofu Burrito Bowl,Bowl,480,20,68,14
-1100,Paneer Burrito Bowl,Bowl,540,24,64,20
-1101,Chole Bhature,Indian,680,22,88,22
-1102,Pav Bhaji,Indian,540,14,76,18
-1103,Rajma Chawal,Indian,560,22,84,10
-1104,Kadai Paneer,Curry,440,22,28,26
-1105,Matar Paneer,Curry,420,20,32,22
-1106,Chana Masala,Curry,380,18,56,10
-1107,Fish Curry,Curry,400,32,22,18
-1108,Egg Curry,Curry,360,22,20,20
-1109,Keema Matar,Curry,480,32,24,28
-1110,Mutton Rogan Josh,Curry,560,38,18,34
-1111,Chicken Saag,Curry,460,36,18,26
-1112,Prawn Masala,Curry,390,30,20,20
-1113,Dahi Chicken,Curry,430,36,16,24
-1114,Kolhapuri Chicken,Curry,480,38,16,28
-1115,Dum Aloo,Curry,340,8,48,14
-1116,Jackfruit Curry,Curry,300,6,50,10
-1117,Mushroom Masala,Curry,310,10,36,14
-1118,Achari Paneer,Curry,410,20,26,26
-1119,Laal Maas,Curry,580,40,14,38
-1120,Chicken Chettinad,Curry,490,38,18,28
-1121,Hyderabadi Chicken,Curry,510,38,22,28
-1122,Goan Fish Curry,Curry,420,32,24,20
-1123,Kerala Prawn Curry,Curry,410,30,22,22
-1124,Thalassery Biryani,Rice Dish,680,36,74,22
-1125,Curd Rice,Rice Dish,360,10,60,10
-1126,Lemon Rice,Rice Dish,380,8,68,10
-1127,Pongal,Rice Dish,420,12,68,12
-1128,Khichdi,Rice Dish,380,14,62,10
-1129,Chicken Dum Biryani,Rice Dish,660,36,74,20
-1130,Prawn Fried Rice,Rice Dish,560,28,68,16
-1131,Mushroom Fried Rice,Rice Dish,480,14,72,14
-1132,Vegetable Fried Rice,Rice Dish,440,10,72,12
-1133,Kimchi Fried Rice,Rice Dish,500,16,72,16
-1134,Nasi Goreng,Rice Dish,580,24,72,20
-1135,Chicken Congee,Rice Dish,320,22,46,6
-1136,Bibimbap,Bowl,560,28,72,16
-1137,Beef Bulgogi Bowl,Bowl,580,38,58,18
-1138,Japchae Bowl,Bowl,480,18,72,12
-1139,Korean Chicken Bowl,Bowl,540,36,58,16
-1140,Sushi Bowl,Bowl,520,30,72,10
-1141,Chicken Katsu Bowl,Bowl,620,36,68,20
-1142,Teriyaki Salmon Bowl,Bowl,560,40,54,16
-1143,Edamame Bowl,Bowl,420,20,52,14
-1144,Miso Glazed Cod,Grilled,380,38,22,14
-1145,Chicken Karaage,Fried,540,32,40,26
-1146,Agedashi Tofu,Japanese,280,14,26,14
-1147,Chicken Katsu Curry,Curry,680,36,78,22
-1148,Beef Curry Bowl,Bowl,620,36,62,22
-1149,Thai Green Curry,Curry,520,28,44,26
-1150,Thai Red Curry,Curry,540,28,46,28
-1151,Massaman Curry,Curry,580,30,52,28
-1152,Panang Curry,Curry,560,28,44,30
-1153,Tom Kha Gai,Soup,380,24,22,22
-1154,Papaya Salad with Chicken,Salad,320,26,28,12
-1155,Basil Fried Rice,Rice Dish,520,24,68,18
-1156,Drunken Noodles,Noodles,560,28,72,18
-1157,Pad See Ew,Noodles,580,30,74,18
-1158,Spring Roll Bowl,Bowl,440,18,64,14
-1159,Vietnamese Grilled Chicken,Grilled,380,38,16,16
-1160,Banh Mi Bowl,Bowl,520,32,60,18
-1161,Chicken Burrito,Mexican,680,38,70,24
-1162,Beef Burrito,Mexican,740,42,72,28
-1163,Veggie Burrito,Mexican,560,18,80,16
-1164,Chicken Taco Bowl,Bowl,580,36,58,22
-1165,Fish Tacos,Mexican,520,30,54,18
-1166,Shrimp Tacos,Mexican,500,28,56,16
-1167,Black Bean Tacos,Mexican,420,16,64,14
-1168,Carnitas Bowl,Bowl,660,40,58,26
-1169,Al Pastor Bowl,Bowl,620,36,60,24
-1170,Barbacoa Bowl,Bowl,640,40,58,26
-1171,Sofritas Bowl,Bowl,500,22,64,18
-1172,Chicken Nachos,Mexican,780,40,72,32
-1173,Steak Nachos,Mexican,840,44,72,36
-1174,Chicken Tamale Bowl,Bowl,580,32,68,20
-1175,Huevos Rancheros Bowl,Bowl,520,26,52,24
-1176,Grilled Chicken Sandwich,Sandwich,520,38,50,16
-1177,Turkey Sandwich,Sandwich,480,34,48,16
-1178,BLT Sandwich,Sandwich,540,22,52,26
-1179,Club Sandwich,Sandwich,620,38,54,28
-1180,Tuna Melt,Sandwich,560,36,48,24
-1181,Philly Cheesesteak,Sandwich,720,44,64,30
-1182,Pulled Chicken Sandwich,Sandwich,580,36,58,18
-1183,Steak Sandwich,Sandwich,680,42,58,28
-1184,Chicken Pesto Panini,Sandwich,560,36,52,20
-1185,Veggie Panini,Sandwich,460,16,62,18
-1186,Mediterranean Chicken Bowl,Bowl,520,38,42,20
-1187,Falafel Bowl,Bowl,480,18,64,18
-1188,Hummus Veggie Bowl,Bowl,420,14,58,18
-1189,Chicken Shawarma Bowl,Bowl,560,38,52,18
-1190,Lamb Shawarma Bowl,Bowl,600,38,54,24
-1191,Grilled Halloumi Bowl,Bowl,480,22,44,24
-1192,Lentil Soup Bowl,Bowl,360,18,52,8
-1193,Moussaka,Baked,580,28,44,30
-1194,Stuffed Peppers,Baked,420,22,46,16
-1195,Greek Chicken Orzo,Pasta,540,36,60,16
-1196,Chicken Souvlaki Plate,Grilled,480,40,28,20
-1197,Lamb Chops Plate,Grilled,560,42,10,34
-1198,Beef Kebab Plate,Grilled,520,40,18,28
-1199,Mixed Grill Platter,Grilled,720,54,14,42
-1200,Chicken Pita Plate,Wrap,540,36,54,18
-1201,Eggs Benedict,Breakfast,620,28,42,36
-1202,Avocado Toast with Egg,Breakfast,480,18,44,24
-1203,Omelette Bowl,Breakfast,420,26,16,28
-1204,Breakfast Burrito,Breakfast,580,30,56,26
-1205,Chicken and Waffles,Breakfast,720,38,68,28
-1206,Smashed Burger,Burger,720,44,54,36
-1207,Double Beef Burger,Burger,860,54,56,44
-1208,BBQ Bacon Burger,Burger,820,48,58,40
-1209,Mushroom Swiss Burger,Burger,700,42,56,32
-1210,Chicken Avocado Burger,Burger,640,40,56,26
-1211,Spicy Crispy Chicken Burger,Burger,660,38,62,28
-1212,Fish Fillet Burger,Burger,580,30,60,24
-1213,Portobello Mushroom Burger,Burger,500,18,62,22
-1214,Lamb Burger,Burger,720,44,54,36
-1215,Turkey Avocado Burger,Burger,620,40,54,26
-1216,Mac and Cheese Bowl,Bowl,640,22,78,26
-1217,Loaded Fries Bowl,Bowl,680,26,74,30
-1218,Chicken Pot Pie Bowl,Bowl,580,30,60,24
-1219,Beef Stew Bowl,Bowl,520,32,48,20
-1220,Lamb Stew Bowl,Bowl,560,36,44,24
-1221,Chicken and Rice Bowl,Bowl,520,36,58,12
-1222,Quinoa Veggie Bowl,Bowl,420,14,58,14
-1223,Brown Rice Chicken Bowl,Bowl,540,38,60,12
-1224,Sweet Potato Chicken Bowl,Bowl,560,36,62,14
-1225,Cauliflower Rice Bowl,Bowl,380,32,32,12
-1226,Zucchini Noodle Bowl,Bowl,340,30,22,14
-1227,Black Bean Rice Bowl,Bowl,480,18,72,12
-1228,Lentil Power Bowl,Bowl,440,20,62,12
-1229,Mediterranean Tuna Bowl,Bowl,460,36,44,14
-1230,Salmon Avocado Bowl,Bowl,560,42,44,22
-1231,Acai Power Bowl,Bowl,480,14,72,14
-1232,Chicken Caesar Bowl,Bowl,500,40,32,22
-1233,Buffalo Chicken Bowl,Bowl,560,40,48,22
-1234,Honey Garlic Chicken Bowl,Bowl,540,38,54,14
-1235,Lemon Pepper Chicken Bowl,Bowl,490,40,46,14
-1236,Teriyaki Tofu Bowl,Bowl,440,24,60,14
-1237,Mango Chicken Bowl,Bowl,520,36,58,12
-1238,Coconut Curry Bowl,Bowl,540,24,62,20
-1239,Jerk Chicken Bowl,Bowl,560,40,52,18
-1240,Chipotle Chicken Bowl,Bowl,580,40,56,18
-1241,Chicken Lo Mein,Noodles,580,30,70,18
-1242,Beef Lo Mein,Noodles,620,34,70,22
-1243,Shrimp Lo Mein,Noodles,540,28,70,14
-1244,Vegetable Lo Mein,Noodles,480,14,72,14
-1245,Singapore Noodles,Noodles,520,26,68,16
-1246,Char Kway Teow,Noodles,580,28,70,22
-1247,Chicken Chow Mein,Noodles,540,28,66,18
-1248,Beef Chow Mein,Noodles,580,32,66,22
-1249,Dan Dan Noodles,Noodles,540,26,62,22
-1250,Spicy Miso Ramen,Noodles,640,34,68,26
-1251,Chicken Marsala,Italian,540,42,22,28
-1252,Chicken Piccata,Italian,480,40,18,26
-1253,Osso Buco,Italian,620,42,28,34
-1254,Risotto with Chicken,Italian,580,32,72,18
-1255,Mushroom Risotto,Italian,520,16,74,18
-1256,Seafood Risotto,Italian,580,32,72,18
-1257,Lasagna,Italian,660,34,64,28
-1258,Chicken Parmesan,Italian,680,46,56,26
-1259,Eggplant Parmesan,Italian,520,18,58,26
-1260,Pasta Carbonara,Pasta,640,32,68,26
-1261,Pesto Pasta with Chicken,Pasta,620,36,68,22
-1262,Pasta Bolognese,Pasta,640,34,70,22
-1263,Arrabiata Pasta,Pasta,500,16,78,14
-1264,Cacio e Pepe,Pasta,560,20,76,18
-1265,Salmon Pasta,Pasta,600,36,66,22
-1266,Shrimp Scampi Pasta,Pasta,580,30,68,22
-1267,Chicken Gnocchi,Pasta,580,34,68,18
-1268,Beef Lasagna,Pasta,700,38,68,28
-1269,Veggie Lasagna,Pasta,560,20,68,22
-1270,Chicken Piccata Pasta,Pasta,600,38,64,22
-1271,Grilled Chicken Plate,Grilled,420,48,10,18
-1272,Chicken Breast with Veggies,Grilled,380,46,18,12
-1273,Grilled Steak Plate,Grilled,520,48,8,30
-1274,Grilled Lamb Chops,Grilled,560,44,6,36
-1275,Grilled Swordfish,Grilled,400,44,8,20
-1276,Herb Crusted Salmon,Grilled,460,42,8,26
-1277,Blackened Tilapia,Grilled,320,40,6,14
-1278,Grilled Shrimp Plate,Grilled,300,32,8,14
-1279,BBQ Chicken Plate,Grilled,460,44,24,18
-1280,Grilled Duck Breast,Grilled,480,40,4,30
-1281,Chicken Donburi,Bowl,560,34,68,16
-1282,Gyudon Beef Bowl,Bowl,600,36,70,20
-1283,Oyakodon,Bowl,540,32,64,18
-1284,Katsudon,Bowl,680,36,74,24
-1285,Ebi Fry Bowl,Bowl,560,30,68,18
-1286,Tofu Donburi,Bowl,460,22,66,14
-1287,Salmon Donburi,Bowl,580,38,66,18
-1288,Tuna Tataki Bowl,Bowl,480,38,54,14
-1289,Chicken Teriyaki Plate,Japanese,480,38,42,16
-1290,Yakitori Chicken,Japanese,360,34,18,14
-1291,Chicken Satay,Asian,420,34,22,20
-1292,Beef Satay,Asian,460,36,22,24
-1293,Shrimp Satay,Asian,380,28,22,18
-1294,Gado Gado Bowl,Asian,480,18,58,22
-1295,Chicken Rendang,Asian,560,38,20,34
-1296,Beef Rendang,Asian,600,40,18,38
-1297,Nasi Lemak Bowl,Asian,620,28,72,26
-1298,Chicken Adobo,Asian,480,38,20,26
-1299,Beef Tapa Bowl,Asian,560,38,52,20
-1300,Chicken Inasal,Asian,400,40,14,18
+food_id,food_name,category,calories,protein,carbs,fat,restaurant_name
+1001,Grilled Chicken Bowl,Bowl,520,42,48,12,Kitchens@ (Adyar)
+1002,Chicken Biryani,Rice Dish,650,35,72,18,Erode Amman Mess (T. Nagar)
+1003,Paneer Butter Masala,Curry,480,22,38,26,Zaitoon (T. Nagar)
+1004,Beef Burrito Bowl,Bowl,680,38,62,22,Healthy Chef (Anna Nagar)
+1005,Salmon Teriyaki,Grilled,490,40,32,18,Zaitoon (T. Nagar)
+1006,Chicken Fried Rice,Rice Dish,610,28,74,18,Erode Amman Mess (T. Nagar)
+1007,Veg Hakka Noodles,Noodles,420,12,68,11,Wok on Fire (Velachery)
+1008,Ramen Bowl,Noodles,580,28,62,20,Hygge by Chef Goku
+1009,Tandoori Chicken,Grilled,390,45,8,14,Healthy Chef (Anna Nagar)
+1010,Chicken Shawarma Wrap,Wrap,540,36,52,16,Rebel Foods (Mandaveli)
+1011,Mutton Biryani,Rice Dish,720,40,70,22,Sahibs Biryani
+1012,Paneer Tikka,Grilled,360,24,18,22,Zaitoon (T. Nagar)
+1013,Dal Makhani,Curry,420,18,52,14,Sahibs Biryani
+1014,Butter Chicken,Curry,510,38,28,28,Zaitoon (T. Nagar)
+1015,Palak Paneer,Curry,390,20,24,24,Zaitoon (T. Nagar)
+1016,Chicken Tikka Masala,Curry,530,40,30,26,The Traditional Foods (Ashok Nagar)
+1017,Egg Fried Rice,Rice Dish,520,18,68,16,Sahibs Biryani
+1018,Chicken Noodle Soup,Soup,310,24,34,8,MacroCloud Kitchen (Central)
+1019,Beef Stir Fry,Stir Fry,480,36,38,16,Wok on Fire (Velachery)
+1020,Shrimp Pad Thai,Noodles,560,28,72,14,Wok on Fire (Velachery)
+1021,Chicken Caesar Salad,Salad,420,36,18,22,Healthy Chef (Anna Nagar)
+1022,Turkey Club Wrap,Wrap,490,34,44,16,Rebel Foods (Mandaveli)
+1023,Grilled Salmon,Grilled,440,42,8,22,Healthy Chef (Anna Nagar)
+1024,Chicken Quesadilla,Mexican,560,36,48,20,Hygge by Chef Goku
+1025,Beef Tacos,Mexican,620,34,58,24,Hygge by Chef Goku
+1026,Veggie Burrito Bowl,Bowl,480,16,72,14,Healthy Chef (Anna Nagar)
+1027,Tofu Stir Fry,Stir Fry,380,22,42,14,Kitchens@ (Adyar)
+1028,Chicken Wrap,Wrap,500,34,48,16,Faasos
+1029,Margherita Pizza,Pizza,720,28,88,24,Hygge by Chef Goku
+1030,BBQ Chicken Pizza,Pizza,820,42,90,28,Ovenstory Pizza
+1031,Pepperoni Pizza,Pizza,880,38,92,34,Hygge by Chef Goku
+1032,Pasta Primavera,Pasta,520,18,76,16,Hygge by Chef Goku
+1033,Spaghetti Bolognese,Pasta,620,34,72,18,The Pasta Bar (Nungambakkam)
+1034,Chicken Alfredo Pasta,Pasta,680,38,74,24,Hygge by Chef Goku
+1035,Penne Arrabbiata,Pasta,490,16,78,12,The Pasta Bar (Nungambakkam)
+1036,Lamb Kofta,Grilled,430,34,18,24,The Soul Kitchen (Besant Nagar)
+1037,Fish and Chips,Fried,720,32,72,32,Rebel Foods (Mandaveli)
+1038,Chicken Burger,Burger,580,34,52,24,The Burger Haus
+1039,Beef Burger,Burger,680,40,52,32,Rebel Foods (Mandaveli)
+1040,Veggie Burger,Burger,480,18,62,16,Rebel Foods (Mandaveli)
+1041,Grilled Tuna Steak,Grilled,380,48,4,18,Zaitoon (T. Nagar)
+1042,Prawn Curry,Curry,420,30,28,20,Zaitoon (T. Nagar)
+1043,Chicken Korma,Curry,560,38,26,32,Zaitoon (T. Nagar)
+1044,Mixed Veg Curry,Curry,320,10,44,12,Sahibs Biryani
+1045,Aloo Gobi,Curry,280,8,44,10,Sahibs Biryani
+1046,Chicken Soup,Soup,280,26,22,8,MacroCloud Kitchen (Central)
+1047,Tom Yum Soup,Soup,220,18,20,6,MacroCloud Kitchen (Central)
+1048,Minestrone Soup,Soup,260,10,38,8,MacroCloud Kitchen (Central)
+1049,French Onion Soup,Soup,310,12,38,10,MacroCloud Kitchen (Central)
+1050,Chicken Enchiladas,Mexican,620,38,58,22,Hygge by Chef Goku
+1051,Beef Nachos,Mexican,740,34,68,32,Hygge by Chef Goku
+1052,Chicken Fajitas,Mexican,580,38,52,20,Hygge by Chef Goku
+1053,Veggie Fajitas,Mexican,460,14,64,16,Hygge by Chef Goku
+1054,Lamb Biryani,Rice Dish,700,38,72,22,Sahibs Biryani
+1055,Veg Biryani,Rice Dish,540,14,84,14,Sahibs Biryani
+1056,Egg Biryani,Rice Dish,580,22,80,16,Sahibs Biryani
+1057,Chicken Pulao,Rice Dish,560,32,68,16,Sahibs Biryani
+1058,Prawn Biryani,Rice Dish,620,34,72,18,Erode Amman Mess (T. Nagar)
+1059,Chicken Pho,Noodles,420,32,48,8,Wok on Fire (Velachery)
+1060,Beef Pho,Noodles,480,36,50,12,Hygge by Chef Goku
+1061,Laksa,Noodles,560,28,62,22,Wok on Fire (Velachery)
+1062,Chicken Udon,Noodles,520,30,68,12,Wok on Fire (Velachery)
+1063,Beef Ramen,Noodles,620,38,64,20,Wok on Fire (Velachery)
+1064,Tonkotsu Ramen,Noodles,680,36,66,26,Hygge by Chef Goku
+1065,Miso Ramen,Noodles,540,24,68,18,Hygge by Chef Goku
+1066,Chicken Soba Noodles,Noodles,460,28,62,10,Wok on Fire (Velachery)
+1067,Kung Pao Chicken,Stir Fry,480,34,34,22,Wok on Fire (Velachery)
+1068,Beef and Broccoli,Stir Fry,420,32,28,18,Wok on Fire (Velachery)
+1069,Sweet and Sour Pork,Stir Fry,520,28,52,20,Wok on Fire (Velachery)
+1070,General Tso Chicken,Stir Fry,560,32,56,22,Kitchens@ (Adyar)
+1071,Mapo Tofu,Stir Fry,360,20,24,20,Kitchens@ (Adyar)
+1072,Chicken Teriyaki Bowl,Bowl,520,38,52,12,Healthy Chef (Anna Nagar)
+1073,Salmon Sushi Bowl,Bowl,540,36,64,12,Healthy Chef (Anna Nagar)
+1074,Tuna Poke Bowl,Bowl,490,38,52,12,Kitchens@ (Adyar)
+1075,Veggie Poke Bowl,Bowl,420,14,68,12,Kitchens@ (Adyar)
+1076,Shrimp Poke Bowl,Bowl,470,32,56,12,Healthy Chef (Anna Nagar)
+1077,Greek Salad with Chicken,Salad,380,34,16,20,EatFit (Mylapore)
+1078,Tuna Nicoise Salad,Salad,360,34,18,18,Healthy Chef (Anna Nagar)
+1079,Quinoa Chicken Salad,Salad,440,36,38,14,Healthy Chef (Anna Nagar)
+1080,Grilled Veggie Salad,Salad,280,10,34,14,Healthy Chef (Anna Nagar)
+1081,Steak Salad,Salad,480,38,18,26,EatFit (Mylapore)
+1082,Chicken Tikka Wrap,Wrap,520,36,50,16,Faasos
+1083,Lamb Shawarma Wrap,Wrap,580,36,54,22,Rebel Foods (Mandaveli)
+1084,Falafel Wrap,Wrap,480,16,64,18,Faasos
+1085,Tuna Wrap,Wrap,460,32,48,14,Faasos
+1086,Grilled Veggie Wrap,Wrap,400,12,60,14,Faasos
+1087,Chicken Gyros,Wrap,540,36,52,18,Rebel Foods (Mandaveli)
+1088,Chicken Souvlaki,Grilled,420,38,18,18,The Soul Kitchen (Besant Nagar)
+1089,Lamb Souvlaki,Grilled,460,36,18,22,The Soul Kitchen (Besant Nagar)
+1090,Grilled Sea Bass,Grilled,380,42,6,18,Zaitoon (T. Nagar)
+1091,Lemon Herb Chicken,Grilled,360,42,6,16,The Soul Kitchen (Besant Nagar)
+1092,Garlic Butter Shrimp,Grilled,320,28,8,18,Zaitoon (T. Nagar)
+1093,BBQ Ribs,Grilled,780,48,36,44,The Soul Kitchen (Besant Nagar)
+1094,Pulled Pork Bowl,Bowl,620,36,52,24,Healthy Chef (Anna Nagar)
+1095,Brisket Bowl,Bowl,680,42,48,28,Kitchens@ (Adyar)
+1096,Chicken Tenders Bowl,Bowl,580,38,52,20,Kitchens@ (Adyar)
+1097,Steak Burrito Bowl,Bowl,720,44,64,26,Kitchens@ (Adyar)
+1098,Shrimp Burrito Bowl,Bowl,580,32,64,16,Healthy Chef (Anna Nagar)
+1099,Tofu Burrito Bowl,Bowl,480,20,68,14,Kitchens@ (Adyar)
+1100,Paneer Burrito Bowl,Bowl,540,24,64,20,Healthy Chef (Anna Nagar)
+1101,Chole Bhature,Indian,680,22,88,22,Sahibs Biryani
+1102,Pav Bhaji,Indian,540,14,76,18,The Traditional Foods (Ashok Nagar)
+1103,Rajma Chawal,Indian,560,22,84,10,The Traditional Foods (Ashok Nagar)
+1104,Kadai Paneer,Curry,440,22,28,26,Sahibs Biryani
+1105,Matar Paneer,Curry,420,20,32,22,Sahibs Biryani
+1106,Chana Masala,Curry,380,18,56,10,The Traditional Foods (Ashok Nagar)
+1107,Fish Curry,Curry,400,32,22,18,Zaitoon (T. Nagar)
+1108,Egg Curry,Curry,360,22,20,20,Zaitoon (T. Nagar)
+1109,Keema Matar,Curry,480,32,24,28,Sahibs Biryani
+1110,Mutton Rogan Josh,Curry,560,38,18,34,Sahibs Biryani
+1111,Chicken Saag,Curry,460,36,18,26,Sahibs Biryani
+1112,Prawn Masala,Curry,390,30,20,20,Sahibs Biryani
+1113,Dahi Chicken,Curry,430,36,16,24,The Traditional Foods (Ashok Nagar)
+1114,Kolhapuri Chicken,Curry,480,38,16,28,Zaitoon (T. Nagar)
+1115,Dum Aloo,Curry,340,8,48,14,Zaitoon (T. Nagar)
+1116,Jackfruit Curry,Curry,300,6,50,10,The Traditional Foods (Ashok Nagar)
+1117,Mushroom Masala,Curry,310,10,36,14,Sahibs Biryani
+1118,Achari Paneer,Curry,410,20,26,26,Zaitoon (T. Nagar)
+1119,Laal Maas,Curry,580,40,14,38,Zaitoon (T. Nagar)
+1120,Chicken Chettinad,Curry,490,38,18,28,Zaitoon (T. Nagar)
+1121,Hyderabadi Chicken,Curry,510,38,22,28,Zaitoon (T. Nagar)
+1122,Goan Fish Curry,Curry,420,32,24,20,Sahibs Biryani
+1123,Kerala Prawn Curry,Curry,410,30,22,22,Zaitoon (T. Nagar)
+1124,Thalassery Biryani,Rice Dish,680,36,74,22,Sahibs Biryani
+1125,Curd Rice,Rice Dish,360,10,60,10,Erode Amman Mess (T. Nagar)
+1126,Lemon Rice,Rice Dish,380,8,68,10,Erode Amman Mess (T. Nagar)
+1127,Pongal,Rice Dish,420,12,68,12,Sahibs Biryani
+1128,Khichdi,Rice Dish,380,14,62,10,Erode Amman Mess (T. Nagar)
+1129,Chicken Dum Biryani,Rice Dish,660,36,74,20,Sahibs Biryani
+1130,Prawn Fried Rice,Rice Dish,560,28,68,16,Erode Amman Mess (T. Nagar)
+1131,Mushroom Fried Rice,Rice Dish,480,14,72,14,Sahibs Biryani
+1132,Vegetable Fried Rice,Rice Dish,440,10,72,12,Erode Amman Mess (T. Nagar)
+1133,Kimchi Fried Rice,Rice Dish,500,16,72,16,Erode Amman Mess (T. Nagar)
+1134,Nasi Goreng,Rice Dish,580,24,72,20,Erode Amman Mess (T. Nagar)
+1135,Chicken Congee,Rice Dish,320,22,46,6,Sahibs Biryani
+1136,Bibimbap,Bowl,560,28,72,16,Kitchens@ (Adyar)
+1137,Beef Bulgogi Bowl,Bowl,580,38,58,18,Kitchens@ (Adyar)
+1138,Japchae Bowl,Bowl,480,18,72,12,Healthy Chef (Anna Nagar)
+1139,Korean Chicken Bowl,Bowl,540,36,58,16,Healthy Chef (Anna Nagar)
+1140,Sushi Bowl,Bowl,520,30,72,10,Healthy Chef (Anna Nagar)
+1141,Chicken Katsu Bowl,Bowl,620,36,68,20,Kitchens@ (Adyar)
+1142,Teriyaki Salmon Bowl,Bowl,560,40,54,16,Healthy Chef (Anna Nagar)
+1143,Edamame Bowl,Bowl,420,20,52,14,Kitchens@ (Adyar)
+1144,Miso Glazed Cod,Grilled,380,38,22,14,The Soul Kitchen (Besant Nagar)
+1145,Chicken Karaage,Fried,540,32,40,26,Rebel Foods (Mandaveli)
+1146,Agedashi Tofu,Japanese,280,14,26,14,Hygge by Chef Goku
+1147,Chicken Katsu Curry,Curry,680,36,78,22,Sahibs Biryani
+1148,Beef Curry Bowl,Bowl,620,36,62,22,Healthy Chef (Anna Nagar)
+1149,Thai Green Curry,Curry,520,28,44,26,The Traditional Foods (Ashok Nagar)
+1150,Thai Red Curry,Curry,540,28,46,28,Zaitoon (T. Nagar)
+1151,Massaman Curry,Curry,580,30,52,28,Zaitoon (T. Nagar)
+1152,Panang Curry,Curry,560,28,44,30,Sahibs Biryani
+1153,Tom Kha Gai,Soup,380,24,22,22,MacroCloud Kitchen (Central)
+1154,Papaya Salad with Chicken,Salad,320,26,28,12,Healthy Chef (Anna Nagar)
+1155,Basil Fried Rice,Rice Dish,520,24,68,18,Sahibs Biryani
+1156,Drunken Noodles,Noodles,560,28,72,18,Wok on Fire (Velachery)
+1157,Pad See Ew,Noodles,580,30,74,18,Wok on Fire (Velachery)
+1158,Spring Roll Bowl,Bowl,440,18,64,14,Healthy Chef (Anna Nagar)
+1159,Vietnamese Grilled Chicken,Grilled,380,38,16,16,Zaitoon (T. Nagar)
+1160,Banh Mi Bowl,Bowl,520,32,60,18,Kitchens@ (Adyar)
+1161,Chicken Burrito,Mexican,680,38,70,24,Hygge by Chef Goku
+1162,Beef Burrito,Mexican,740,42,72,28,Hygge by Chef Goku
+1163,Veggie Burrito,Mexican,560,18,80,16,Hygge by Chef Goku
+1164,Chicken Taco Bowl,Bowl,580,36,58,22,Healthy Chef (Anna Nagar)
+1165,Fish Tacos,Mexican,520,30,54,18,Hygge by Chef Goku
+1166,Shrimp Tacos,Mexican,500,28,56,16,Hygge by Chef Goku
+1167,Black Bean Tacos,Mexican,420,16,64,14,Hygge by Chef Goku
+1168,Carnitas Bowl,Bowl,660,40,58,26,Kitchens@ (Adyar)
+1169,Al Pastor Bowl,Bowl,620,36,60,24,Kitchens@ (Adyar)
+1170,Barbacoa Bowl,Bowl,640,40,58,26,Kitchens@ (Adyar)
+1171,Sofritas Bowl,Bowl,500,22,64,18,Kitchens@ (Adyar)
+1172,Chicken Nachos,Mexican,780,40,72,32,Hygge by Chef Goku
+1173,Steak Nachos,Mexican,840,44,72,36,Hygge by Chef Goku
+1174,Chicken Tamale Bowl,Bowl,580,32,68,20,Kitchens@ (Adyar)
+1175,Huevos Rancheros Bowl,Bowl,520,26,52,24,Healthy Chef (Anna Nagar)
+1176,Grilled Chicken Sandwich,Sandwich,520,38,50,16,Healthy Chef (Anna Nagar)
+1177,Turkey Sandwich,Sandwich,480,34,48,16,Healthy Chef (Anna Nagar)
+1178,BLT Sandwich,Sandwich,540,22,52,26,The Sandwich Shop
+1179,Club Sandwich,Sandwich,620,38,54,28,The Sandwich Shop
+1180,Tuna Melt,Sandwich,560,36,48,24,Healthy Chef (Anna Nagar)
+1181,Philly Cheesesteak,Sandwich,720,44,64,30,Healthy Chef (Anna Nagar)
+1182,Pulled Chicken Sandwich,Sandwich,580,36,58,18,Healthy Chef (Anna Nagar)
+1183,Steak Sandwich,Sandwich,680,42,58,28,The Sandwich Shop
+1184,Chicken Pesto Panini,Sandwich,560,36,52,20,The Sandwich Shop
+1185,Veggie Panini,Sandwich,460,16,62,18,Healthy Chef (Anna Nagar)
+1186,Mediterranean Chicken Bowl,Bowl,520,38,42,20,Kitchens@ (Adyar)
+1187,Falafel Bowl,Bowl,480,18,64,18,Kitchens@ (Adyar)
+1188,Hummus Veggie Bowl,Bowl,420,14,58,18,Healthy Chef (Anna Nagar)
+1189,Chicken Shawarma Bowl,Bowl,560,38,52,18,Healthy Chef (Anna Nagar)
+1190,Lamb Shawarma Bowl,Bowl,600,38,54,24,Healthy Chef (Anna Nagar)
+1191,Grilled Halloumi Bowl,Bowl,480,22,44,24,Kitchens@ (Adyar)
+1192,Lentil Soup Bowl,Bowl,360,18,52,8,Kitchens@ (Adyar)
+1193,Moussaka,Baked,580,28,44,30,Kitchens@ (Adyar)
+1194,Stuffed Peppers,Baked,420,22,46,16,Kitchens@ (Adyar)
+1195,Greek Chicken Orzo,Pasta,540,36,60,16,The Pasta Bar (Nungambakkam)
+1196,Chicken Souvlaki Plate,Grilled,480,40,28,20,Zaitoon (T. Nagar)
+1197,Lamb Chops Plate,Grilled,560,42,10,34,The Soul Kitchen (Besant Nagar)
+1198,Beef Kebab Plate,Grilled,520,40,18,28,Zaitoon (T. Nagar)
+1199,Mixed Grill Platter,Grilled,720,54,14,42,The Soul Kitchen (Besant Nagar)
+1200,Chicken Pita Plate,Wrap,540,36,54,18,Rebel Foods (Mandaveli)
+1201,Eggs Benedict,Breakfast,620,28,42,36,Sangeetha (Adyar)
+1202,Avocado Toast with Egg,Breakfast,480,18,44,24,Sangeetha (Adyar)
+1203,Omelette Bowl,Breakfast,420,26,16,28,Sangeetha (Adyar)
+1204,Breakfast Burrito,Breakfast,580,30,56,26,Sangeetha (Adyar)
+1205,Chicken and Waffles,Breakfast,720,38,68,28,The Traditional Foods (Ashok Nagar)
+1206,Smashed Burger,Burger,720,44,54,36,Rebel Foods (Mandaveli)
+1207,Double Beef Burger,Burger,860,54,56,44,The Burger Haus
+1208,BBQ Bacon Burger,Burger,820,48,58,40,The Burger Haus
+1209,Mushroom Swiss Burger,Burger,700,42,56,32,The Burger Haus
+1210,Chicken Avocado Burger,Burger,640,40,56,26,The Burger Haus
+1211,Spicy Crispy Chicken Burger,Burger,660,38,62,28,The Burger Haus
+1212,Fish Fillet Burger,Burger,580,30,60,24,Rebel Foods (Mandaveli)
+1213,Portobello Mushroom Burger,Burger,500,18,62,22,Rebel Foods (Mandaveli)
+1214,Lamb Burger,Burger,720,44,54,36,The Burger Haus
+1215,Turkey Avocado Burger,Burger,620,40,54,26,The Burger Haus
+1216,Mac and Cheese Bowl,Bowl,640,22,78,26,Kitchens@ (Adyar)
+1217,Loaded Fries Bowl,Bowl,680,26,74,30,Healthy Chef (Anna Nagar)
+1218,Chicken Pot Pie Bowl,Bowl,580,30,60,24,Kitchens@ (Adyar)
+1219,Beef Stew Bowl,Bowl,520,32,48,20,Kitchens@ (Adyar)
+1220,Lamb Stew Bowl,Bowl,560,36,44,24,Kitchens@ (Adyar)
+1221,Chicken and Rice Bowl,Bowl,520,36,58,12,Healthy Chef (Anna Nagar)
+1222,Quinoa Veggie Bowl,Bowl,420,14,58,14,Kitchens@ (Adyar)
+1223,Brown Rice Chicken Bowl,Bowl,540,38,60,12,Healthy Chef (Anna Nagar)
+1224,Sweet Potato Chicken Bowl,Bowl,560,36,62,14,Kitchens@ (Adyar)
+1225,Cauliflower Rice Bowl,Bowl,380,32,32,12,Healthy Chef (Anna Nagar)
+1226,Zucchini Noodle Bowl,Bowl,340,30,22,14,Kitchens@ (Adyar)
+1227,Black Bean Rice Bowl,Bowl,480,18,72,12,Healthy Chef (Anna Nagar)
+1228,Lentil Power Bowl,Bowl,440,20,62,12,Healthy Chef (Anna Nagar)
+1229,Mediterranean Tuna Bowl,Bowl,460,36,44,14,Kitchens@ (Adyar)
+1230,Salmon Avocado Bowl,Bowl,560,42,44,22,Healthy Chef (Anna Nagar)
+1231,Acai Power Bowl,Bowl,480,14,72,14,Kitchens@ (Adyar)
+1232,Chicken Caesar Bowl,Bowl,500,40,32,22,Kitchens@ (Adyar)
+1233,Buffalo Chicken Bowl,Bowl,560,40,48,22,Healthy Chef (Anna Nagar)
+1234,Honey Garlic Chicken Bowl,Bowl,540,38,54,14,Healthy Chef (Anna Nagar)
+1235,Lemon Pepper Chicken Bowl,Bowl,490,40,46,14,Healthy Chef (Anna Nagar)
+1236,Teriyaki Tofu Bowl,Bowl,440,24,60,14,Healthy Chef (Anna Nagar)
+1237,Mango Chicken Bowl,Bowl,520,36,58,12,Healthy Chef (Anna Nagar)
+1238,Coconut Curry Bowl,Bowl,540,24,62,20,Kitchens@ (Adyar)
+1239,Jerk Chicken Bowl,Bowl,560,40,52,18,Kitchens@ (Adyar)
+1240,Chipotle Chicken Bowl,Bowl,580,40,56,18,Healthy Chef (Anna Nagar)
+1241,Chicken Lo Mein,Noodles,580,30,70,18,Wok on Fire (Velachery)
+1242,Beef Lo Mein,Noodles,620,34,70,22,Hygge by Chef Goku
+1243,Shrimp Lo Mein,Noodles,540,28,70,14,Wok on Fire (Velachery)
+1244,Vegetable Lo Mein,Noodles,480,14,72,14,Wok on Fire (Velachery)
+1245,Singapore Noodles,Noodles,520,26,68,16,Hygge by Chef Goku
+1246,Char Kway Teow,Noodles,580,28,70,22,Wok on Fire (Velachery)
+1247,Chicken Chow Mein,Noodles,540,28,66,18,Wok on Fire (Velachery)
+1248,Beef Chow Mein,Noodles,580,32,66,22,Wok on Fire (Velachery)
+1249,Dan Dan Noodles,Noodles,540,26,62,22,Wok on Fire (Velachery)
+1250,Spicy Miso Ramen,Noodles,640,34,68,26,Hygge by Chef Goku
+1251,Chicken Marsala,Italian,540,42,22,28,Hygge by Chef Goku
+1252,Chicken Piccata,Italian,480,40,18,26,Hygge by Chef Goku
+1253,Osso Buco,Italian,620,42,28,34,Hygge by Chef Goku
+1254,Risotto with Chicken,Italian,580,32,72,18,The Pasta Bar (Nungambakkam)
+1255,Mushroom Risotto,Italian,520,16,74,18,Hygge by Chef Goku
+1256,Seafood Risotto,Italian,580,32,72,18,Hygge by Chef Goku
+1257,Lasagna,Italian,660,34,64,28,Hygge by Chef Goku
+1258,Chicken Parmesan,Italian,680,46,56,26,The Pasta Bar (Nungambakkam)
+1259,Eggplant Parmesan,Italian,520,18,58,26,The Pasta Bar (Nungambakkam)
+1260,Pasta Carbonara,Pasta,640,32,68,26,Hygge by Chef Goku
+1261,Pesto Pasta with Chicken,Pasta,620,36,68,22,Hygge by Chef Goku
+1262,Pasta Bolognese,Pasta,640,34,70,22,The Pasta Bar (Nungambakkam)
+1263,Arrabiata Pasta,Pasta,500,16,78,14,The Pasta Bar (Nungambakkam)
+1264,Cacio e Pepe,Pasta,560,20,76,18,Hygge by Chef Goku
+1265,Salmon Pasta,Pasta,600,36,66,22,The Pasta Bar (Nungambakkam)
+1266,Shrimp Scampi Pasta,Pasta,580,30,68,22,Hygge by Chef Goku
+1267,Chicken Gnocchi,Pasta,580,34,68,18,Hygge by Chef Goku
+1268,Beef Lasagna,Pasta,700,38,68,28,The Pasta Bar (Nungambakkam)
+1269,Veggie Lasagna,Pasta,560,20,68,22,The Pasta Bar (Nungambakkam)
+1270,Chicken Piccata Pasta,Pasta,600,38,64,22,The Pasta Bar (Nungambakkam)
+1271,Grilled Chicken Plate,Grilled,420,48,10,18,The Soul Kitchen (Besant Nagar)
+1272,Chicken Breast with Veggies,Grilled,380,46,18,12,Healthy Chef (Anna Nagar)
+1273,Grilled Steak Plate,Grilled,520,48,8,30,Healthy Chef (Anna Nagar)
+1274,Grilled Lamb Chops,Grilled,560,44,6,36,The Soul Kitchen (Besant Nagar)
+1275,Grilled Swordfish,Grilled,400,44,8,20,Zaitoon (T. Nagar)
+1276,Herb Crusted Salmon,Grilled,460,42,8,26,The Soul Kitchen (Besant Nagar)
+1277,Blackened Tilapia,Grilled,320,40,6,14,The Soul Kitchen (Besant Nagar)
+1278,Grilled Shrimp Plate,Grilled,300,32,8,14,The Soul Kitchen (Besant Nagar)
+1279,BBQ Chicken Plate,Grilled,460,44,24,18,The Soul Kitchen (Besant Nagar)
+1280,Grilled Duck Breast,Grilled,480,40,4,30,Zaitoon (T. Nagar)
+1281,Chicken Donburi,Bowl,560,34,68,16,Kitchens@ (Adyar)
+1282,Gyudon Beef Bowl,Bowl,600,36,70,20,Healthy Chef (Anna Nagar)
+1283,Oyakodon,Bowl,540,32,64,18,Healthy Chef (Anna Nagar)
+1284,Katsudon,Bowl,680,36,74,24,Healthy Chef (Anna Nagar)
+1285,Ebi Fry Bowl,Bowl,560,30,68,18,Kitchens@ (Adyar)
+1286,Tofu Donburi,Bowl,460,22,66,14,Kitchens@ (Adyar)
+1287,Salmon Donburi,Bowl,580,38,66,18,Healthy Chef (Anna Nagar)
+1288,Tuna Tataki Bowl,Bowl,480,38,54,14,Healthy Chef (Anna Nagar)
+1289,Chicken Teriyaki Plate,Japanese,480,38,42,16,Hygge by Chef Goku
+1290,Yakitori Chicken,Japanese,360,34,18,14,Hygge by Chef Goku
+1291,Chicken Satay,Asian,420,34,22,20,Hygge by Chef Goku
+1292,Beef Satay,Asian,460,36,22,24,Hygge by Chef Goku
+1293,Shrimp Satay,Asian,380,28,22,18,Hygge by Chef Goku
+1294,Gado Gado Bowl,Asian,480,18,58,22,Hygge by Chef Goku
+1295,Chicken Rendang,Asian,560,38,20,34,Hygge by Chef Goku
+1296,Beef Rendang,Asian,600,40,18,38,Hygge by Chef Goku
+1297,Nasi Lemak Bowl,Asian,620,28,72,26,Hygge by Chef Goku
+1298,Chicken Adobo,Asian,480,38,20,26,Hygge by Chef Goku
+1299,Beef Tapa Bowl,Asian,560,38,52,20,Hygge by Chef Goku
+1300,Chicken Inasal,Asian,400,40,14,18,Hygge by Chef Goku

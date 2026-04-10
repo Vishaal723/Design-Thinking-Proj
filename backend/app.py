@@ -30,6 +30,9 @@ def init_db():
     # Meals table
     df = pd.read_csv('../cloud_kitchen_meals.csv')
     df['price'] = (df['calories'] * 0.12 + df['protein'] * 1.5 + df['carbs'] * 0.3 + df['fat'] * 0.8).round(0).astype(int)
+    # Ensure restaurant_name exists, if not fill with default
+    if 'restaurant_name' not in df.columns:
+        df['restaurant_name'] = 'MacroCloud Kitchen'
     df.to_sql('meals', conn, if_exists='replace', index=False)
     # Orders table
     conn.execute('''
@@ -47,6 +50,7 @@ def init_db():
             order_id INTEGER,
             food_id INTEGER,
             food_name TEXT,
+            restaurant_name TEXT,
             price REAL,
             quantity INTEGER,
             FOREIGN KEY(order_id) REFERENCES orders(id)
@@ -59,30 +63,48 @@ def init_db():
 @app.route('/api/login', methods=['POST'])
 def login():
     data = request.json
-    username = data.get('username')
-    password = data.get('password')
+    username = str(data.get('username', '')).strip()
+    password = str(data.get('password', '')).strip()
+    
+    print(f"[DEBUG] Login attempt | Username: '{username}' | Password: '{password}'")
+    
     if not username or not password:
         return jsonify({"error": "Missing credentials"}), 400
     
     conn = sqlite3.connect('kitchen.db', timeout=15)
     cursor = conn.cursor()
-    # Check if user exists
-    cursor.execute("SELECT id, username, password FROM users WHERE username = ?", (username,))
+    # Check if user exists (case-insensitive username check)
+    cursor.execute("SELECT id, username, password, address FROM users WHERE LOWER(username) = LOWER(?)", (username,))
     user = cursor.fetchone()
     
     if user:
-        if user[2] != password:
+        # Match passwords (trimmed just in case of DB whitespace issues)
+        stored_pass = str(user[2]).strip()
+        if stored_pass != password:
+             print(f"[DEBUG] Password mismatch for '{username}'. Stored: '{stored_pass}', Provided: '{password}'")
              conn.close()
              return jsonify({"error": "Incorrect password"}), 401
+        
         user_id = str(user[0])
+        display_name = user[1]
+        address = user[3]
+        print(f"[DEBUG] Login successful for user ID: {user_id}")
     else:
         # Register new user
+        print(f"[DEBUG] Registering new user: '{username}'")
         cursor.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, password))
         conn.commit()
         user_id = str(cursor.lastrowid)
+        display_name = username
+        address = None
     
     conn.close()
-    return jsonify({"message": "Success", "user_id": user_id, "username": username})
+    return jsonify({
+        "message": "Success", 
+        "user_id": user_id, 
+        "username": display_name, 
+        "address": address
+    })
 
 @app.route('/api/user/address', methods=['POST'])
 def update_address():
@@ -100,7 +122,7 @@ def update_address():
 @app.route('/api/meals', methods=['GET'])
 def get_meals():
     conn = sqlite3.connect('kitchen.db', timeout=15)
-    df = pd.read_sql_query("SELECT food_id, food_name, category, calories, protein, carbs, fat, price FROM meals LIMIT 100", conn)
+    df = pd.read_sql_query("SELECT food_id, food_name, restaurant_name, category, calories, protein, carbs, fat, price FROM meals LIMIT 100", conn)
     conn.close()
     return jsonify(df.to_dict('records'))
 
@@ -116,12 +138,14 @@ def recommend():
         return jsonify({"error": "Missing weight or goal"}), 400
     try:
         result = MODEL.recommend(float(weight), goal, int(top_n), category)
-        # Add prices
+        # Add prices and restaurant names
         conn = sqlite3.connect('kitchen.db', timeout=15)
-        prices = pd.read_sql_query("SELECT food_id, price FROM meals", conn).set_index('food_id')['price'].to_dict()
+        extra_info = pd.read_sql_query("SELECT food_id, price, restaurant_name FROM meals", conn).set_index('food_id').to_dict('index')
         conn.close()
         for rec in result['recommendations']:
-            rec['price'] = prices.get(rec.get('food_id', 0), 0)
+            info = extra_info.get(rec.get('food_id', 0), {})
+            rec['price'] = info.get('price', 0)
+            rec['restaurant_name'] = info.get('restaurant_name', 'Unknown Kitchen')
         return jsonify(result)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
@@ -148,11 +172,12 @@ def checkout_cart():
     for item in items:
         food_id = item['food_id']
         food_name = item.get('food_name', item.get('meal_name', 'Meal'))
+        restaurant_name = item.get('restaurant_name', 'Unknown')
         price = item['price']
         quantity = item.get('quantity', 1)
         total += price * quantity
-        conn.execute("INSERT INTO order_items (order_id, food_id, food_name, price, quantity) VALUES (?, ?, ?, ?, ?)",
-                     (order_id, food_id, food_name, price, quantity))
+        conn.execute("INSERT INTO order_items (order_id, food_id, food_name, restaurant_name, price, quantity) VALUES (?, ?, ?, ?, ?, ?)",
+                     (order_id, food_id, food_name, restaurant_name, price, quantity))
                      
     conn.execute("UPDATE orders SET total_amount = ? WHERE id = ?", (total, order_id))
     conn.commit()

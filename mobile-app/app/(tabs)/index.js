@@ -5,18 +5,28 @@ import {
   KeyboardAvoidingView, Platform, Modal, Alert,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import * as Location from 'expo-location';
+
+// Conditional import for MapView to prevent web errors
+let MapView, Marker;
+if (Platform.OS !== 'web') {
+  const Maps = require('react-native-maps');
+  MapView = Maps.default;
+  Marker = Maps.Marker;
+}
 import { useApp } from '../../context/AppContext';
 import { getCategories, getRecommendations, updateAddress } from '../../src/api';
 import { colors, spacing, radius, fontSize, fontWeight } from '../../src/theme';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-const RESTAURANTS = {
-  'Vegetarian': 'Green Earth Eats',
-  'Vegan': 'Plant Power Kitchen',
-  'Low Carb': 'Keto Clean',
-  'High Protein': 'Muscle Meals',
-  'Balanced': 'Cloud 9 Diners',
+const CHENNAI_CENTER = {
+  latitude: 13.0827,
+  longitude: 80.2707,
+  latitudeDelta: 0.05,
+  longitudeDelta: 0.05,
 };
+
+// Categories will now use backend restaurant names directly.
 
 const GOALS = [
   { value: 'bulking', label: '💪 Bulking' },
@@ -38,6 +48,9 @@ export default function HomeScreen() {
   const [addressModal, setAddressModal] = useState(!user?.address);
   const [addressInput, setAddressInput] = useState(user?.address || '');
   const [savingAddr, setSavingAddr] = useState(false);
+  const [addressMode, setAddressMode] = useState('manual'); // 'manual' or 'map'
+  const [region, setRegion] = useState(CHENNAI_CENTER);
+  const [mapMarker, setMapMarker] = useState(null);
   const [addedId, setAddedId] = useState(null);
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
@@ -77,6 +90,41 @@ export default function HomeScreen() {
     setTimeout(() => setAddedId(null), 1200);
   };
 
+  const getCurrentLocation = async () => {
+    setSavingAddr(true);
+    try {
+      let { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== 'granted') {
+        Alert.alert('Permission denied', 'Allow location access to find you on the map.');
+        setSavingAddr(false);
+        return;
+      }
+
+      let location = await Location.getCurrentPositionAsync({});
+      const { latitude, longitude } = location.coords;
+      const newRegion = { ...region, latitude, longitude };
+      setRegion(newRegion);
+      setMapMarker({ latitude, longitude });
+      setAddressInput(`📍 Lat: ${latitude.toFixed(4)}, Lng: ${longitude.toFixed(4)} (Fetching address...)`);
+      
+      // Attempt reverse geocode
+      try {
+        const addr = await Location.reverseGeocodeAsync({ latitude, longitude });
+        if (addr && addr.length > 0) {
+          const first = addr[0];
+          const formatted = `${first.name ? first.name + ', ' : ''}${first.street ? first.street + ', ' : ''}${first.city || first.subregion}`;
+          setAddressInput(formatted);
+        }
+      } catch (e) {
+        console.log("Reverse geocode failed", e);
+      }
+    } catch (err) {
+      Alert.alert('Error', 'Could not get location');
+    } finally {
+      setSavingAddr(false);
+    }
+  };
+
   const saveAddress = async () => {
     if (!addressInput.trim()) { Alert.alert('Please enter a valid address'); return; }
     setSavingAddr(true);
@@ -107,7 +155,7 @@ export default function HomeScreen() {
             <View style={{ flex: 1 }}>
               <Text style={styles.mealName} numberOfLines={2}>{rec.meal_name}</Text>
               <Text style={styles.restaurantLabel}>
-                🍴 {RESTAURANTS[rec.category] || 'MacroCloud Kitchen'}
+                🍴 {rec.restaurant_name}
               </Text>
             </View>
             <View style={styles.matchBadge}>
@@ -142,23 +190,76 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       {/* Address Modal */}
-      <Modal visible={addressModal} transparent animationType="fade">
+      <Modal visible={addressModal} transparent animationType="slide">
         <View style={styles.modalOverlay}>
           <View style={styles.modalCard}>
-            <Text style={styles.modalTitle}>📍 Delivery Address</Text>
-            <Text style={styles.modalSub}>Where should we send your meals?</Text>
-            <TextInput
-              style={styles.modalInput}
-              placeholder="Enter full address..."
-              placeholderTextColor={colors.textMuted}
-              value={addressInput}
-              onChangeText={setAddressInput}
-              multiline
-            />
+            <View style={styles.modalHeader}>
+              <Text style={styles.modalTitle}>📍 Delivery Location</Text>
+              <TouchableOpacity onPress={() => setAddressModal(false)}>
+                <Ionicons name="close" size={24} color={colors.textSecondary} />
+              </TouchableOpacity>
+            </View>
+
+            <View style={styles.addressToggle}>
+              <TouchableOpacity 
+                style={[styles.toggleBtn, addressMode === 'manual' && styles.toggleBtnActive]}
+                onPress={() => setAddressMode('manual')}
+              >
+                <Text style={[styles.toggleBtnText, addressMode === 'manual' && styles.toggleBtnTextActive]}>Type Address</Text>
+              </TouchableOpacity>
+              <TouchableOpacity 
+                style={[styles.toggleBtn, addressMode === 'map' && styles.toggleBtnActive]}
+                onPress={() => setAddressMode('map')}
+              >
+                <Text style={[styles.toggleBtnText, addressMode === 'map' && styles.toggleBtnTextActive]}>Use Map</Text>
+              </TouchableOpacity>
+            </View>
+
+            {addressMode === 'manual' || Platform.OS === 'web' ? (
+              <View>
+                {Platform.OS === 'web' && addressMode === 'map' && (
+                  <View style={[styles.mapContainer, { justifyContent: 'center', alignItems: 'center' }]}>
+                    <Ionicons name="map-outline" size={48} color={colors.textMuted} />
+                    <Text style={{ color: colors.textSecondary, marginTop: 10, textAlign: 'center' }}>
+                      Maps are only available on the mobile app.{"\n"}Please use manual entry here.
+                    </Text>
+                  </View>
+                )}
+                <TextInput
+                  style={styles.modalInput}
+                  placeholder="Flat No, Building, Street Name..."
+                  placeholderTextColor={colors.textMuted}
+                  value={addressInput}
+                  onChangeText={setAddressInput}
+                  multiline
+                />
+              </View>
+            ) : (
+              <View style={styles.mapContainer}>
+                {MapView && (
+                  <MapView
+                    style={styles.map}
+                    initialRegion={region}
+                    onPress={(e) => {
+                      const coords = e.nativeEvent.coordinate;
+                      setMapMarker(coords);
+                      setAddressInput(`📍 Coordinates: ${coords.latitude.toFixed(4)}, ${coords.longitude.toFixed(4)}`);
+                    }}
+                  >
+                    {mapMarker && <Marker coordinate={mapMarker} />}
+                  </MapView>
+                )}
+                <TouchableOpacity style={styles.currentLocBtn} onPress={getCurrentLocation}>
+                  <Ionicons name="locate" size={20} color={colors.brand} />
+                  <Text style={styles.currentLocText}>Locate Me</Text>
+                </TouchableOpacity>
+              </View>
+            )}
+
             <TouchableOpacity style={styles.modalBtn} onPress={saveAddress} disabled={savingAddr}>
               {savingAddr
                 ? <ActivityIndicator color="#fff" />
-                : <Text style={styles.modalBtnText}>Save Address</Text>
+                : <Text style={styles.modalBtnText}>Confirm Delivery Location</Text>
               }
             </TouchableOpacity>
           </View>
@@ -417,6 +518,7 @@ const styles = StyleSheet.create({
   addBtnText: { color: colors.brand, fontSize: fontSize.sm, fontWeight: fontWeight.bold },
 
   // Address Modal
+  // Address Modal
   modalOverlay: {
     flex: 1, backgroundColor: 'rgba(0,0,0,0.7)',
     justifyContent: 'flex-end',
@@ -425,15 +527,36 @@ const styles = StyleSheet.create({
     backgroundColor: colors.bgCard, borderTopLeftRadius: radius.xl,
     borderTopRightRadius: radius.xl, padding: spacing.xl,
     borderTopWidth: 1, borderColor: colors.border,
+    minHeight: 500,
   },
-  modalTitle: { fontSize: fontSize.xl, fontWeight: fontWeight.bold, color: colors.textPrimary, marginBottom: spacing.xs },
-  modalSub: { color: colors.textSecondary, fontSize: fontSize.sm, marginBottom: spacing.md },
+  modalHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: spacing.md },
+  modalTitle: { fontSize: fontSize.xl, fontWeight: fontWeight.bold, color: colors.textPrimary },
+  addressToggle: { 
+    flexDirection: 'row', backgroundColor: colors.bgInput, 
+    borderRadius: radius.md, padding: 4, marginBottom: spacing.md 
+  },
+  toggleBtn: { flex: 1, paddingVertical: 10, alignItems: 'center', borderRadius: radius.sm },
+  toggleBtnActive: { backgroundColor: colors.brand },
+  toggleBtnText: { color: colors.textSecondary, fontWeight: fontWeight.semibold },
+  toggleBtnTextActive: { color: '#fff' },
   modalInput: {
     backgroundColor: colors.bgInput, borderRadius: radius.md,
     borderWidth: 1, borderColor: colors.border, padding: spacing.md,
     color: colors.textPrimary, fontSize: fontSize.md,
-    minHeight: 80, textAlignVertical: 'top', marginBottom: spacing.md,
+    height: 120, textAlignVertical: 'top', marginBottom: spacing.md,
   },
+  mapContainer: {
+    height: 250, borderRadius: radius.md, overflow: 'hidden',
+    marginBottom: spacing.md, borderWidth: 1, borderColor: colors.border,
+  },
+  map: { flex: 1 },
+  currentLocBtn: {
+    position: 'absolute', bottom: 10, right: 10,
+    backgroundColor: colors.bgCard, padding: 8, borderRadius: radius.sm,
+    flexDirection: 'row', alignItems: 'center', gap: 6,
+    borderWidth: 1, borderColor: colors.brand,
+  },
+  currentLocText: { color: colors.brand, fontSize: fontSize.xs, fontWeight: fontWeight.bold },
   modalBtn: {
     backgroundColor: colors.brand, borderRadius: radius.full,
     height: 52, alignItems: 'center', justifyContent: 'center',

@@ -1,7 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { GoogleMap, Marker, LoadScript } from '@react-google-maps/api';
 import Cart from './Cart';
 import { mockCategories, mockRecommendations } from './mockData.js';
 import './App.css';
+
+const GOOGLE_MAPS_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY || "";
+
+const mapContainerStyle = {
+  width: '100%',
+  height: '100%'
+};
+
+const defaultCenter = {
+  lat: 13.0827, // Chennai coordinates
+  lng: 80.2707
+};
 
 function App() {
   const [user, setUser] = useState(null);
@@ -25,13 +38,8 @@ function App() {
   const [addressInput, setAddressInput] = useState('');
   const [savingAddress, setSavingAddress] = useState(false);
 
-  const restaurants = {
-    'Vegetarian': 'Green Earth Eats',
-    'Vegan': 'Plant Power Kitchen',
-    'Low Carb': 'Keto Clean',
-    'High Protein': 'Muscle Meals',
-    'Balanced': 'Cloud 9 Diners'
-  };
+  const [addressMode, setAddressMode] = useState('manual'); // 'manual' or 'map'
+  const [mapCenter, setMapCenter] = useState(defaultCenter);
 
   useEffect(() => {
     fetchCategories();
@@ -96,17 +104,18 @@ function App() {
     }
   };
 
-  const saveAddress = async (e) => {
-    e.preventDefault();
+  const saveAddress = async (addr) => {
+    const addressToSave = addr || addressInput;
+    if (!addressToSave) return;
     setSavingAddress(true);
     try {
       const res = await fetch('/api/user/address', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ user_id: user.user_id, address: addressInput })
+        body: JSON.stringify({ user_id: user.user_id, address: addressToSave })
       });
       if (res.ok) {
-        setUser(prev => ({ ...prev, address: addressInput }));
+        setUser(prev => ({ ...prev, address: addressToSave }));
       }
     } catch (err) {
       console.error(err);
@@ -114,6 +123,13 @@ function App() {
       setSavingAddress(false);
     }
   };
+
+  const onMapClick = useCallback((e) => {
+    const lat = e.latLng.lat();
+    const lng = e.latLng.lng();
+    setMapCenter({ lat, lng });
+    setAddressInput(`📍 Lat: ${lat.toFixed(4)}, Lng: ${lng.toFixed(4)}`);
+  }, []);
 
   const handleLogout = () => {
     setUser(null);
@@ -237,15 +253,67 @@ function App() {
 
       {user && !user.address && (
         <div className="cart-overlay" style={{zIndex: 2500}}>
-          <div className="login-card" style={{margin: 'auto', marginTop: '150px'}}>
+          <div className="login-card" style={{margin: 'auto', marginTop: '100px', maxWidth: '500px'}}>
             <h2>Delivery Details</h2>
             <p>Where are we sending your curated meals?</p>
-            <form onSubmit={saveAddress}>
-              <input type="text" placeholder="Enter full block/street address" value={addressInput} onChange={e => setAddressInput(e.target.value)} required />
-              <button className="submit-btn" type="submit" disabled={savingAddress}>
-                {savingAddress ? 'Saving...' : 'Save Address'}
+            
+            <div className="address-toggle">
+              <button 
+                className={`toggle-btn ${addressMode === 'manual' ? 'active' : ''}`}
+                onClick={() => setAddressMode('manual')}
+              >
+                Manual Entry
               </button>
-            </form>
+              <button 
+                className={`toggle-btn ${addressMode === 'map' ? 'active' : ''}`}
+                onClick={() => setAddressMode('map')}
+              >
+                Pick on Map
+              </button>
+            </div>
+
+            <div className="location-picker-ui">
+              {addressMode === 'manual' ? (
+                <div className="manual-input-group">
+                  <input 
+                    type="text" 
+                    placeholder="Enter full block/street address" 
+                    value={addressInput} 
+                    onChange={e => setAddressInput(e.target.value)} 
+                    required 
+                  />
+                </div>
+              ) : (
+                <div className="map-picker-group">
+                  <div className="map-container">
+                    {GOOGLE_MAPS_API_KEY ? (
+                      <LoadScript googleMapsApiKey={GOOGLE_MAPS_API_KEY}>
+                        <GoogleMap
+                          mapContainerStyle={mapContainerStyle}
+                          center={mapCenter}
+                          zoom={14}
+                          onClick={onMapClick}
+                        >
+                          <Marker position={mapCenter} draggable onDragEnd={onMapClick} />
+                        </GoogleMap>
+                      </LoadScript>
+                    ) : (
+                      <div className="map-placeholder">
+                        <i>📍</i>
+                        <p>Google Maps API Key Missing.<br/>Please use manual entry or add key to .env</p>
+                      </div>
+                    )}
+                  </div>
+                  <div className="address-box" style={{marginBottom: '10px'}}>
+                    {addressInput || "Click on map to set pin"}
+                  </div>
+                </div>
+              )}
+              
+              <button className="submit-btn" onClick={() => saveAddress()} disabled={savingAddress || !addressInput}>
+                {savingAddress ? 'Saving...' : 'Confirm Delivery Location'}
+              </button>
+            </div>
           </div>
         </div>
       )}
@@ -315,7 +383,9 @@ function App() {
                 <div key={rec.rank} className="meal-card">
                   <div className="meal-rank">#{rec.rank}</div>
                   <h4>{rec.meal_name}</h4>
-                  <div className="restaurant-label">🍴 {restaurants[rec.category] || 'Swiggy Cloud'}</div>
+                  <div className="restaurant-label">
+                    <i>🍴</i> {rec.restaurant_name}
+                  </div>
                   <div className="meal-category">{rec.category} • Match: {(rec.match_score*100).toFixed(0)}%</div>
                   
                   <div className="macros">
